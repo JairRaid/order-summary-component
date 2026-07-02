@@ -1,0 +1,309 @@
+:root {
+  --base-font:
+    "Red Hat Display", system-ui, -apple-system, "Segoe UI", BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.5;
+
+  --gray-600: hsl(224 23% 55%);
+  --purple-500: hsl(245 83% 68%);
+  --blue-950: hsl(223 47% 23%);
+  --blue-700: hsl(245 75% 52%);
+  --blue-150: hsl(224 100% 92%);
+  --blue-100: hsl(225 100% 94%);
+  --blue-50: hsl(225 100% 98%);
+
+  --text-preset-1: 900 1.75rem/1.35 var(--base-font);
+  --text-preset-2: 900 1.375rem/1.35 var(--base-font);
+  --text-preset-3-black: 900 16px/1.65 var(--base-font);
+  --text-preset-3-bold: 700 16px/1.65 var(--base-font);
+  --text-preset-3-medium: 500 16px/1.65 var(--base-font);
+  --text-preset-4-black: 900 15px/1.65 var(--base-font);
+  --text-preset-4-bold: 700 15px/1.65 var(--base-font);
+  --text-preset-4-medium: 500 15px/1.65 var(--base-font);
+
+  --card-shadow: 0 2.5rem 2.5rem hsl(228 87% 39% / 0.1518);
+  --button-shadow: 0 1.25rem 1.25rem hsl(245 75% 52% / 0.1903);
+
+  --transition: 180ms ease;
+}
+
+/* ==========================
+   Modern CSS Reset
+   ========================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Improve text rendering */
+html {
+  hanging-punctuation: first last;
+  font-family: var(--base-font);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Media */
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Form elements inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prevent long words from overflowing */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove default list styles when desired */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+button {
+  display: inline-flex;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Base styles */
+
+body {
+  background-color: var(--blue-100);
+}
+
+h1 {
+  font: var(--text-preset-2);
+  color: var(--blue-950);
+}
+
+p {
+  font: var(--text-preset-4-medium);
+  color: var(--gray-600);
+}
+
+.page-shell {
+  min-block-size: 100vh;
+  inline-size: 100%;
+  background: url("../assets/images/background.svg") top center / contain
+    no-repeat;
+  display: flex;
+  background-size: 150%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+.page-content {
+  inline-size: 100%;
+  max-inline-size: 28.125rem;
+}
+
+.order-summary {
+  text-align: center;
+  border-radius: 1.25rem;
+  overflow: clip;
+  box-shadow: var(--card-shadow);
+}
+
+.hero-illustration img {
+  inline-size: 100%;
+}
+
+.summary-panel {
+  background: hsl(0, 100%, 100%);
+  padding: 32px 24px 26px 24px;
+  transition: padding var(--transition);
+}
+
+.summary-copy {
+  margin-inline: auto;
+  margin-block-start: 1rem;
+  max-inline-size: 18.125rem;
+}
+
+.plan-card,
+.plan-card__meta {
+  display: flex;
+  align-items: center;
+}
+
+.plan-card {
+  background: var(--blue-50);
+  margin-block-start: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.4375rem;
+  border-radius: 11px;
+}
+
+.plan-card__text {
+  text-align: start;
+  margin-inline-start: 1rem;
+}
+
+.plan-name {
+  font: var(--text-preset-3-black);
+  color: var(--blue-950);
+}
+
+.plan-price {
+  font: var(--text-preset-3-medium);
+  color: var(--gray-600);
+}
+
+.button--ghost {
+  font: var(--text-preset-3-bold);
+  color: var(--blue-700);
+  margin-inline-start: auto;
+}
+
+.button--primary {
+  background: var(--blue-700);
+  font: var(--text-preset-3-black);
+  color: hsl(0, 100%, 100%);
+  border-radius: 0.6875rem;
+  box-shadow: var(--button-shadow);
+  inline-size: 100%;
+  block-size: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 24px;
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.button--ghost,
+.button--secondary {
+  transition: color var(--transition);
+}
+
+.button--secondary {
+  font: var(--text-preset-4-black);
+  color: var(--gray-600);
+  margin-block-start: 24px;
+}
+
+.plan-name,
+.plan-price,
+.button--ghost,
+.button--primary,
+.button--secondary {
+  font-size: 15px;
+}
+
+.button--ghost:hover,
+.button--ghost:focus-visible {
+  color: var(--purple-500);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  transform: translateY(-0.125rem);
+  background: var(--purple-500);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  color: var(--blue-950);
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--blue-950);
+  outline-offset: 0.1875rem;
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .summary-panel {
+    padding: 48px 48px 43px 48px;
+  }
+
+  .plan-card {
+    margin-block-start: 16px;
+  }
+
+  .button--primary,
+  .button--secondary {
+    margin-block-start: 32px;
+  }
+
+  .summary-panel {
+    padding: 48px 48px 43px 48px;
+  }
+
+  .plan-card {
+    margin-block-start: 16px;
+  }
+
+  .summary-copy,
+  .plan-name,
+  .plan-price,
+  .button--ghost,
+  .button--primary,
+  .button--secondary {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .page-shell {
+    background-size: contain;
+  }
+}

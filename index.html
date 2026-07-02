@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Order summary card with plan details, pricing, and payment actions."
+    />
+    <title>Order summary component</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <main class="page-content">
+        <section class="order-summary" aria-labelledby="order-summary-title">
+          <div class="hero" aria-hidden="true">
+            <div class="hero-illustration" aria-hidden="true">
+              <img src="assets/images/music-flatline.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="summary-panel">
+            <h1 id="order-summary-title">Order Summary</h1>
+            <p class="summary-copy">
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+
+            <div
+              class="plan-card"
+              role="group"
+              aria-labelledby="plan-card-title"
+            >
+              <div class="plan-card__meta">
+                <div class="plan-icon" aria-hidden="true">
+                  <img src="assets/images/plan-icon.svg" alt="" />
+                </div>
+                <div class="plan-card__text">
+                  <p class="plan-name">Annual Plan</p>
+                  <p class="plan-price">$59.99/year</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="button button--ghost"
+                aria-label="Change annual plan"
+              >
+                Change
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="button button--primary"
+              aria-label="Proceed to payment for Annual Plan"
+            >
+              Proceed to Payment
+            </button>
+            <button
+              type="button"
+              class="button button--secondary"
+              aria-label="Cancel order"
+            >
+              Cancel Order
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
