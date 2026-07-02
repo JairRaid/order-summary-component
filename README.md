@@ -27,7 +27,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/JairRaid/huddle-landing-page
+- Solution URL: https://github.com/JairRaid/order-summary-component
 - Live Site URL: https://jairraid.github.io/huddle-landing-page/
 
 ## My process
