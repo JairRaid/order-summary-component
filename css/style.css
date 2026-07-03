@@ -217,7 +217,7 @@ p {
   block-size: 50px;
   justify-content: center;
   align-items: center;
-  margin-block-start: 24px;
+  margin-block-start: 1.5rem;
 
   transition:
     transform var(--transition),
