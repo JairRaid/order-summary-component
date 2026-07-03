@@ -136,10 +136,8 @@ p {
 .page-shell {
   min-block-size: 100vh;
   inline-size: 100%;
-  background: url("../assets/images/background.svg") top center / contain
-    no-repeat;
+  background: url("../assets/images/background.svg") top center / 150% no-repeat;
   display: flex;
-  background-size: 150%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -242,7 +240,7 @@ p {
 .button--ghost,
 .button--primary,
 .button--secondary {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .button--ghost:hover,
@@ -276,20 +274,12 @@ p {
   }
 
   .plan-card {
-    margin-block-start: 16px;
+    margin-block-start: 1rem;
   }
 
   .button--primary,
   .button--secondary {
     margin-block-start: 32px;
-  }
-
-  .summary-panel {
-    padding: 48px 48px 43px 48px;
-  }
-
-  .plan-card {
-    margin-block-start: 16px;
   }
 
   .summary-copy,
