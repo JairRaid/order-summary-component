@@ -1,4 +1,4 @@
-# Frontend Mentor - huddle landing page solution
+# Frontend Mentor - oder summary component solution
 
 This is a solution to the [Order summary component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
